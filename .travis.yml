@@ -4,8 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t hefayed/docker-react -f Dockerfile.dev .
-
+  - docker build -t hefayed/docker-react -f Dockerfile .
 script:
   - docker run -e CI=true hefayed/docker-react npm run test
 
